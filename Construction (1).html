@@ -1,0 +1,361 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Construction Website</title>
+
+  
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+ <style>
+   * {
+     margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+     font-family: Arial, sans-serif;
+  }
+
+   html {
+    scroll-behavior: smooth;
+    }
+
+   body {
+     color: #333;    
+    background: #fff;
+      line-height: 1.6;
+     }
+
+     a {
+     text-decoration: none;
+        color: inherit;
+     }
+     ul {
+    list-style: none;
+      }
+
+    .container {
+      width: 90%;
+       max-width: 1200px;
+       margin: auto;
+   }
+
+   .top-bar {
+      background: #222;
+     color: white;
+      padding: 10px 0;
+        font-size: 13px;
+}
+
+    .top-content {
+      display: flex;
+       justify-content: space-between;
+      flex-wrap: wrap;
+     gap: 10px;
+  }
+   .top-bar i {
+     color: #f5b335;
+      margin-right: 6px;
+      }
+   header {
+     background: white;
+      box-shadow: 0 2px10px#00000015;
+     position: sticky;
+    top: 0;
+         z-index: 1000;
+    }
+
+  .navbar {
+        min-height: 80px;
+    display: flex;
+        justify-content: space-between;
+        align-items: center;
+            gap: 20px;
+        }
+
+        .logo {
+            font-size: 27px;
+            font-weight: bold;
+            white-space: nowrap;
+        }
+
+        .logo span {
+            color: #f5b335;
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 22px;
+        }
+
+        .nav-links li {
+            position: relative;
+        }
+
+        .nav-links > li > a {
+            display: block;
+            padding: 28px 0;
+            font-size: 13px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .nav-links > li > a:hover {
+            color: #f5b335;
+        }
+
+        .nav-links i {
+            margin-right: 5px;
+        }
+
+        .nav-links .fa-angle-down {
+            margin-left: 4px;
+            margin-right: 0;
+        }
+
+        /* Hover Dropdown */
+        .dropdown {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            width: 200px;
+            background: white;
+            border-top: 3px solid #f5b335;
+            box-shadow: 0 5px 20px #00000020;
+            display: none;
+        }
+
+        .dropdown a {
+            display: block;
+            padding: 12px 15px;
+            border-bottom: 1px solid #eee;
+            font-size: 13px;
+            transition: 0.3s;
+        }
+
+        .dropdown a:hover {
+            background: #f5b335;
+            color: #222;
+            padding-left: 22px;
+        }
+
+        .nav-links li:hover > .dropdown {
+            display: block;
+        }
+
+   
+
+        .btn {
+            display: inline-block;
+            padding: 13px 25px;
+            background: #f5b335;
+            color: #222;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            background: white;
+        }
+
+        section {
+            padding: 75px 0;
+        }
+
+        .section-heading {
+            text-align: center;
+            max-width: 700px;
+            margin: 0 auto 40px;
+        }
+
+        .section-heading span {
+            color: #f5b335;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+
+        .section-heading h2 {
+            font-size: 35px;
+            margin: 10px 0;
+        }
+
+        .section-heading p {
+            color: #777;
+        }
+
+  
+        .services,
+        .projects,
+        .contact {
+            background: #f7f7f7;
+        }
+
+        .service-grid,
+        .project-grid,
+        .blog-grid,
+        .why-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .service-card {
+            background: white;
+            text-align: center;
+            padding: 30px 20px;
+            border: 1px solid #eee;
+            transition: 0.3s;
+        }
+
+        .service-card:hover {
+            transform: translateY(-7px);
+            box-shadow: 0 10px 25px #00000015;
+        }
+
+        .symbol {
+            width: 80px;
+            height: 80px;
+            background: #fff5df;
+            border-radius: 50%;
+            margin: 0 auto 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .symbol i {
+            font-size: 35px;
+            color: #f5b335;
+        }
+
+        .service-card h3 {
+            margin-bottom: 10px;
+        }
+
+        .service-card p {
+            color: #777;
+            font-size: 14px;
+        }
+    </style>
+</head>
+
+<body>
+
+  
+
+    <header>
+        <nav class="container navbar">
+ <a href="#home" class="logo">CON<span>STRUCT</span></a>
+<ul class="nav-links">
+     <li>
+    <a href="#home"><i class="fa-solid fa-house"></i> HOME</a>
+                </li>
+
+                <li>
+   <a href="#about"><i class="fa-solid fa-building"></i> ABOUT</a>
+                </li>
+
+                <li>
+    <a href="#services">
+      <i class="fa-solid fa-screwdriver-wrench"></i>
+   SERVICES
+  <i class="fa-solid fa-angle-down"></i>
+                    </a>
+
+  <ul class="dropdown">
+    <li><a href="#services"><i class="fa-solid fa-house"></i> House Building</a></li>
+ <li><a href="#services"><i class="fa-solid fa-helmet-safety"></i> Construction</a></li>
+  <li><a href="#services"><i class="fa-solid fa-paint-roller"></i> Renovation</a></li>
+ <li><a href="#services"><i class="fa-solid fa-compass-drafting"></i> Architecture</a></li>
+                    </ul>
+                </li>
+
+                <li>
+                    <a href="#projects"><i class="fa-solid fa-building"></i> PROJECTS</a>
+                </li>
+
+                <li>
+                    <a href="#blog"><i class="fa-solid fa-blog"></i> BLOG</a>
+                </li>
+
+                <li>
+                    <a href="#contact"><i class="fa-solid fa-envelope"></i> CONTACT</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero" id="home">
+        <div class="container">
+            <div class="hero-content">
+                <span class="small-title">WELCOME TO CONSTRUCT</span>
+                <h1>We Build Your Dream Home</h1>
+                <p>
+                    We provide professional construction services
+                    with quality materials, modern designs and
+                    experienced workers.
+                </p>
+                <a href="#services" class="btn">
+                    OUR SERVICES <i class="fa-solid fa-arrow-right"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section class="services" id="services">
+        <div class="container">
+
+            <div class="section-heading">
+                <span>What We Do</span>
+                <h2>Our Services</h2>
+                <p>We provide reliable construction services for every project.</p>
+            </div>
+
+            <div class="service-grid">
+
+                <div class="service-card">
+                    <div class="symbol"><i class="fa-solid fa-house"></i></div>
+                    <h3>House Building</h3>
+                    <p>We build strong and beautiful houses according to your needs.</p>
+                </div>
+
+                <div class="service-card">
+                    <div class="symbol"><i class="fa-solid fa-helmet-safety"></i></div>
+                    <h3>Construction</h3>
+                    <p>Professional construction services for residential buildings.</p>
+                </div>
+
+                <div class="service-card">
+                    <div class="symbol"><i class="fa-solid fa-screwdriver-wrench"></i></div>
+                    <h3>Renovation</h3>
+                    <p>We renovate old buildings and give them a modern look.</p>
+                </div>
+
+                <div class="service-card">
+                    <div class="symbol"><i class="fa-solid fa-compass-drafting"></i></div>
+                    <h3>Architecture</h3>
+                    <p>Modern plans and designs for your dream building.</p>
+                </div>
+
+                <div class="service-card">
+                    <div class="symbol"><i class="fa-solid fa-paint-roller"></i></div>
+                    <h3>Painting</h3>
+                    <p>Professional painting services for homes and offices.</p>
+                </div>
+
+                <div class="service-card">
+                    <div class="symbol"><i class="fa-solid fa-people-group"></i></div>
+                    <h3>Expert Team</h3>
+                    <p>Experienced workers who focus on quality and safety.</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+</body>
+</html>
