@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Construction Company</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:Arial,sans-serif;color:#222;line-height:1.6}
+a{text-decoration:none;color:inherit}
+.container{width:90%;max-width:1200px;margin:auto}
+section{padding:75px 0}
+h2{font-size:32px;margin-bottom:10px}
+.section-title{text-align:center;margin-bottom:40px}
+.section-title p,.muted{color:#777}
+.btn{display:inline-block;background:#f5b335;color:#171717;padding:12px 24px;font-weight:bold;border:0;cursor:pointer}
+.btn:hover{background:#222;color:#fff}
+.topbar{background:#222;color:#fff;padding:8px 0;font-size:13px}
+.topbar .container{display:flex;justify-content:space-between;gap:10px}
+header{position:sticky;top:0;z-index:99;background:#fff;box-shadow:0 2px 10px #0001}
+.navbar{min-height:76px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+.logo{font-size:24px;font-weight:bold;white-space:nowrap}.logo span{color:#f5b335}
+.nav-links{display:flex;align-items:center;gap:23px;list-style:none}
+.nav-links>li{position:relative}
+.nav-links>li>a{display:block;padding:27px 0;font-size:12px;font-weight:bold}
+.nav-links>li>a:hover{color:#e6a11d}
+.dropdown-menu{display:none;position:absolute;top:100%;left:-15px;width:210px;background:#fff;box-shadow:0 8px 25px #0002;list-style:none}
+.dropdown-menu a{display:block;padding:14px 20px;font-size:14px}
+.dropdown-menu a:hover{background:#f5b335;color:#fff}
+.dropdown:hover .dropdown-menu,.dropdown:focus-within .dropdown-menu{display:block}
+.hero{min-height:580px;display:flex;align-items:center;color:#fff;background:linear-gradient(90deg,#000b,#0003),url('https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=1800&q=85') center/cover no-repeat}
+.hero-content{max-width:680px;padding:65px 0}.hero h1{font-size:clamp(36px,5vw,62px);line-height:1.15;margin:18px 0}.hero h1 span{color:#f5b335}.hero p{margin-bottom:25px;color:#eee}
+.grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:25px}
+.card{border:1px solid #eee;padding:28px;background:#fff;transition:.25s}
+.card:hover{transform:translateY(-5px);box-shadow:0 10px 28px #0001}
+.symbol{font-size:34px;margin-bottom:12px}.card h3{margin-bottom:10px}.card p{color:#777;font-size:14px}
+.light{background:#f7f7f7}
+.project{overflow:hidden;background:#fff}.project img,.blog-card img{width:100%;height:225px;object-fit:cover;display:block;transition:.3s}.project:hover img{transform:scale(1.04)}.project-info{padding:18px}.project-info p{font-size:14px;color:#777}
+.stats{background:#f5b335;padding:40px 0}.stats-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;text-align:center}.stat h2{font-size:34px}.stat p{font-size:14px}
+.feature{padding:24px;background:#fff}.feature h3{margin-bottom:8px}.feature p{font-size:14px;color:#777}
+.blog-card{background:#fff}.blog-content{padding:22px}.blog-content h3{margin:8px 0}.blog-content p{font-size:14px;color:#777}.read-more{display:inline-block;margin-top:12px;color:#c38a15;font-weight:bold}
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:40px}.contact-info p{margin:14px 0;color:#666}
+.contact-form input,.contact-form textarea{width:100%;padding:14px;margin-bottom:14px;border:1px solid #ddd;font:inherit}.contact-form textarea{height:130px;resize:vertical}.contact-form input:focus,.contact-form textarea:focus{outline:1px solid #f5b335}
+footer{background:#191919;color:#fff;padding:50px 0 20px}.footer-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:30px}.footer-grid h3{color:#f5b335;margin-bottom:14px}.footer-grid p{color:#bbb;font-size:14px;margin-bottom:8px}.copyright{text-align:center;border-top:1px solid #383838;margin-top:30px;padding-top:18px;color:#aaa;font-size:13px}
+@media(max-width:850px){.navbar{flex-direction:column;padding:14px 0}.nav-links{justify-content:center;flex-wrap:wrap;gap:15px}.nav-links>li>a{padding:8px 0}.grid-3{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:560px){.topbar .container{flex-direction:column;text-align:center}.nav-links{gap:10px}.nav-links>li>a{font-size:10px}.grid-3,.stats-grid,.contact-grid,.footer-grid{grid-template-columns:1fr}.hero{min-height:470px}.hero h1{font-size:38px}h2{font-size:27px}.dropdown-menu{left:auto;right:0}}
+</style>
+</head>
+<body>
+<div class="topbar"><div class="container"><span>Welcome to our Construction Company</span><span>Call Us: +92 300 1234567</span></div></div>
+<header><nav class="navbar container">
+<a class="logo" href="#home">CONSTRUCTION<span>.</span></a>
+<ul class="nav-links">
+<li><a href="#home">HOME</a></li><li><a href="#features">FEATURE</a></li><li><a href="#projects">PROJECT</a></li><li><a href="#services">SERVICE</a></li><li><a href="#blog">BLOG</a></li>
+<li class="dropdown"><a href="#pages">PAGES ⌄</a><ul class="dropdown-menu"><li><a href="#services">Generic</a></li><li><a href="#features">Elements</a></li></ul></li>
+<li><a href="#contact">CONTACT</a></li>
+</ul></nav></header>
+<main>
+<section class="hero" id="home"><div class="container"><div class="hero-content">
+<p>BUILDING YOUR FUTURE</p><h1>WE BUILD YOUR <span>DREAM</span> HOUSE</h1>
+<p>We provide professional construction services with quality materials, modern designs and experienced workers.</p>
+<a class="btn" href="#services">DISCOVER OUR SERVICES</a>
+</div></div></section>
+<section id="services"><div class="container"><div class="section-title"><h2>Our Services</h2><p>Quality construction solutions for every project.</p></div>
+<div class="grid-3">
+<div class="card"><div class="symbol">🏠</div><h3>Building Drawings</h3><p>Professional building plans and modern architectural designs for your projects.</p></div>
+<div class="card"><div class="symbol">🏗️</div><h3>Building Construction</h3><p>We construct homes and commercial buildings with care and quality materials.</p></div>
+<div class="card"><div class="symbol">🔧</div><h3>Building Renovation</h3><p>Upgrade your property with repair, renovation and maintenance services.</p></div>
+</div></div></section>
+<section class="light" id="features"><div class="container"><div class="section-title"><h2>Features That Make Us Unique</h2><p>Quality work, professional service and customer satisfaction.</p></div>
+<div class="grid-3">
+<div class="feature"><h3>🛠 Basic Repairs</h3><p>We handle common building repairs and maintenance with professional care.</p></div>
+<div class="feature"><h3>🏢 Professional Services</h3><p>Our experienced team provides reliable services for every project.</p></div>
+<div class="feature"><h3>🧱 Preventive Maintenance</h3><p>Regular maintenance helps protect your building and extend its useful life.</p></div>
+</div></div></section>
+<section id="projects"><div class="container"><div class="section-title"><h2>Our Latest Projects</h2><p>Take a look at some of our construction work.</p></div>
+<div class="grid-3">
+<div class="project"><img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=800&q=80" alt="Modern house"><div class="project-info"><h3>Modern Family House</h3><p>Residential Construction</p></div></div>
+<div class="project"><img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=800&q=80" alt="Office building"><div class="project-info"><h3>Commercial Building</h3><p>Commercial Construction</p></div></div>
+<div class="project"><img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=800&q=80" alt="Construction site"><div class="project-info"><h3>Building Development</h3><p>Infrastructure Project</p></div></div>
+<div class="project"><img src="https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=800&q=80" alt="House interior"><div class="project-info"><h3>Luxury Interior</h3><p>Interior Design</p></div></div>
+<div class="project"><img src="https://images.unsplash.com/photo-1511818966892-d7d671e672a2?auto=format&fit=crop&w=800&q=80" alt="Architecture"><div class="project-info"><h3>Modern Architecture</h3><p>Architectural Design</p></div></div>
+<div class="project"><img src="https://images.unsplash.com/photo-1541976590-713941681591?auto=format&fit=crop&w=800&q=80" alt="Building project"><div class="project-info"><h3>Construction Project</h3><p>Building Development</p></div></div>
+</div></div></section>
+<section class="stats"><div class="container stats-grid">
+<div class="stat"><h2>2536</h2><p>Projects Completed</p></div><div class="stat"><h2>6784</h2><p>Happy Clients</p></div><div class="stat"><h2>1059</h2><p>Tasks Completed</p></div><div class="stat"><h2>435</h2><p>Professionals</p></div>
+</div></section>
+<section id="pages"><div class="container"><div class="section-title"><h2>Why Choose Us?</h2><p>We believe in quality, trust and professional work.</p></div>
+<div class="grid-3">
+<div class="feature"><h3>⭐ Expert Technicians</h3><p>Our skilled technicians work carefully to deliver dependable results.</p></div>
+<div class="feature"><h3>✓ Professional Service</h3><p>We focus on professional service and quality in every project.</p></div>
+<div class="feature"><h3>☎ Great Support</h3><p>We communicate with our clients throughout the construction process.</p></div>
+<div class="feature"><h3>⚙ Technical Skills</h3><p>Our team uses modern techniques and practical construction knowledge.</p></div>
+<div class="feature"><h3>🏆 Reliable Work</h3><p>We aim to build long-term relationships through dependable work.</p></div>
+<div class="feature"><h3>♥ Customer Satisfaction</h3><p>Customer satisfaction is an important part of our work.</p></div>
+</div></div></section>
+<section class="light" id="blog"><div class="container"><div class="section-title"><h2>Latest From Blog</h2><p>News, ideas and useful construction tips.</p></div>
+<div class="grid-3">
+<div class="blog-card"><img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=800&q=80" alt="Building design"><div class="blog-content"><small>Construction Tips</small><h3>Planning Your Dream Home</h3><p>Good planning helps make a construction project more organised and successful.</p><a class="read-more" href="#contact">READ MORE →</a></div></div>
+<div class="blog-card"><img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=800&q=80" alt="Workers at a site"><div class="blog-content"><small>Building Advice</small><h3>Choosing Quality Materials</h3><p>Quality materials can improve durability, safety and the life of a building.</p><a class="read-more" href="#contact">READ MORE →</a></div></div>
+<div class="blog-card"><img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=800&q=80" alt="Commercial architecture"><div class="blog-content"><small>Architecture</small><h3>Modern Building Designs</h3><p>Thoughtful design combines function, comfort and an attractive appearance.</p><a class="read-more" href="#contact">READ MORE →</a></div></div>
+</div></div></section>
+<section id="contact"><div class="container"><div class="section-title"><h2>Contact Us</h2><p>Have a project in mind? Get in touch with us.</p></div>
+<div class="contact-grid"><div class="contact-info"><h3>Let's Build Something Great</h3><p>📍 Address: Karachi, Pakistan</p><p>☎ Phone: +92 300 1234567</p><p>✉ Email: info@example.com</p><p class="muted">Replace these sample details with your own business contact information.</p></div>
+<form class="contact-form" onsubmit="event.preventDefault(); alert('Thank you! This demo form is not connected to an email service yet.');">
+<input type="text" placeholder="Your Name" required>
+<input type="email" placeholder="Your Email" required>
+<input type="text" placeholder="Subject" required>
+<textarea placeholder="Your Message" required></textarea>
+<button class="btn" type="submit">SEND MESSAGE</button>
+</form></div></div></section>
+</main>
+<footer><div class="container"><div class="footer-grid">
+<div><h3>About Us</h3><p>We provide construction and renovation services with a focus on quality, reliability and customer satisfaction.</p></div>
+<div><h3>Quick Links</h3><p><a href="#home">Home</a></p><p><a href="#services">Our Services</a></p><p><a href="#projects">Our Projects</a></p></div>
+<div><h3>Contact Information</h3><p>Karachi, Pakistan</p><p>+92 300 1234567</p><p>info@example.com</p></div>
+</div><div class="copyright">Copyright © 2026 Construction Company. Demo website for learning.</div></div></footer>
+</body>
+</html>
